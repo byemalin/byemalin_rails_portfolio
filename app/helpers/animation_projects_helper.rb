@@ -1,0 +1,2 @@
+module AnimationProjectsHelper
+end

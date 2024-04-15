@@ -1,0 +1,2 @@
+class AnimationProject < ApplicationRecord
+end
