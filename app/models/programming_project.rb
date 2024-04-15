@@ -1,0 +1,2 @@
+class ProgrammingProject < ApplicationRecord
+end
