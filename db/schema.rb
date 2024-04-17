@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_04_16_100903) do
+ActiveRecord::Schema[7.1].define(version: 2024_04_17_085134) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -45,9 +45,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_04_16_100903) do
   create_table "animation_projects", force: :cascade do |t|
     t.string "title"
     t.text "description"
-    t.string "cover_image_url"
     t.string "video_url"
-    t.string "images", default: [], array: true
     t.string "videos", default: [], array: true
     t.string "tags", default: [], array: true
     t.datetime "created_at", null: false
@@ -59,8 +57,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_04_16_100903) do
     t.text "description"
     t.text "technologies_used"
     t.string "live_url"
-    t.string "cover_image_url"
-    t.string "images", default: [], array: true
     t.string "tags", default: [], array: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
