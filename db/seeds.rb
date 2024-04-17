@@ -30,11 +30,11 @@ AnimationProject.create!(
 
 # Seed data for Programming Projects
 ProgrammingProject.create!(
-  title: "Portfolio Website",
+  title: "Byemalin Test Portfolio Website",
   description: "A personal portfolio website to showcase my software development and animation projects.",
   technologies_used: "Ruby on Rails, JavaScript, CSS",
   live_url: "http://example.com",
-  cover_image_url: "https://yaleclimateconnections.org/wp-content/uploads/2021/06/060721_balloon_1600.jpg",
+  cover_image_url: "https://i.imgur.com/CkFUxkE.png",
   images: [
     "https://www.publicdomainpictures.net/pictures/10000/nahled/zebra-head-11281366876AZ3M.jpg",
     "https://www.publicdomainpictures.net/pictures/200000/nahled/electric-guitar-1493126318Zrn.jpg"
