@@ -8,6 +8,10 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
+# Clear existing data
+AnimationProject.delete_all
+ProgrammingProject.delete_all
+
 # Seed data for Animation Projects
 AnimationProject.create!(
   title: "Ocean Adventures",
@@ -30,7 +34,7 @@ ProgrammingProject.create!(
   description: "A personal portfolio website to showcase my software development and animation projects.",
   technologies_used: "Ruby on Rails, JavaScript, CSS",
   live_url: "http://example.com",
-  cover_image_url: "https://www.publicdomainpictures.net/pictures/30000/nahled/map-of-the-world-1371772257P4n.jpg",
+  cover_image_url: "https://yaleclimateconnections.org/wp-content/uploads/2021/06/060721_balloon_1600.jpg",
   images: [
     "https://www.publicdomainpictures.net/pictures/10000/nahled/zebra-head-11281366876AZ3M.jpg",
     "https://www.publicdomainpictures.net/pictures/200000/nahled/electric-guitar-1493126318Zrn.jpg"
