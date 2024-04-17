@@ -2,5 +2,6 @@
 
 <% @programming_projects.each do |project| %>
   <%= project.title %>
-  <%= image_tag(project.cover_image_url) %>
+  <%= cl_image_tag("w0lxqtuycfvzbanzmbbj",
+      width: 400, height: 300, crop: :fill) %>
 <% end %>
