@@ -2,6 +2,13 @@
 
 <% @programming_projects.each do |project| %>
   <%= project.title %>
-  <%= cl_image_tag("w0lxqtuycfvzbanzmbbj",
-      width: 400, height: 300, crop: :fill) %>
+
+  <%# Cover Photo %>
+  <%= cl_image_tag project.cover_photo.key %>
+
+
+  <% project.photos.each do |photo| %>
+    <%= cl_image_tag photo.key %>
+  <% end %>
+  <br>
 <% end %>
