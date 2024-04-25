@@ -13,3 +13,12 @@
  *= require_tree .
  *= require_self
  */
+
+
+//  Scss partials:
+ @import "pages/index";
+
+
+body{
+  background-color: red;
+}
