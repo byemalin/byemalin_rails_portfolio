@@ -1,0 +1,32 @@
+/* MAIN HEADER */
+
+#mainNavHeader{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  width: 90vw;
+  margin: 3vw 5vw;
+    ul{
+      display: flex;
+      padding: 0;
+    }
+    li{
+      list-style: none;
+      padding:0 1rem;
+    }
+}
+
+#navLogoContainer{
+  width: 12rem;
+  height: auto;
+}
+
+// Logo Hover animation to be replaced by js:
+
+#navLogoContainer svg path{
+  transition: all 500ms;
+  &:hover {
+    fill:red;
+  }
+}

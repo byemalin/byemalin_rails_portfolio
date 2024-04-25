@@ -1,0 +1,87 @@
+/* Hero */
+
+.hero{
+  max-height: 44rem;
+  width: 100vw;
+
+  display:flex;
+  justify-content: center;
+
+  overflow: hidden;
+
+  background-image: url('https://res.cloudinary.com/dxvi2kqnz/image/upload/v1714051895/blurryPortrait_pwbn0s.jpg');
+  background-position: center;
+  background-size: cover;
+
+  .spacer{
+    height: 15%;
+  }
+}
+
+
+
+#heroImageContainer{
+  width: 85%;
+  height: auto;
+
+  img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    animation: slowRotate 20s linear 700ms infinite;
+    animation-play-state: running;
+  }
+}
+
+
+// Greeting popup tab:
+
+
+#menuGreeting{
+  color: white;
+  background-color: black;
+
+  width: 320px;
+  height:95px;
+
+  border-radius: 64.2857px 0px 0px 64.2857px;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  user-select: none;
+
+  cursor: pointer;
+}
+
+
+#greetingContainer{
+  width:80px;
+  height:95px;
+
+  overflow: hidden;
+
+  position:absolute;
+
+  top: 20rem;
+  right:0px;
+
+  transition: all 400ms ease-in 200ms;
+}
+
+#greetingContainer:hover{
+  width: 320px;
+}
+
+
+// Define rotating image animation:
+
+@keyframes slowRotate {
+  0%{
+      transform: rotate(0deg);
+  }
+  100%{
+      transform: rotate(360deg);
+  }
+}

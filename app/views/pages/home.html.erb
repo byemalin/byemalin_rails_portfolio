@@ -1,1 +1,78 @@
-<h1>This is da home page</h1>
+<!--  -->
+
+
+<section class="hero">
+    <div id="heroImageContainer">
+        <div class="spacer"></div>
+        <!-- Line drawing image for hero:-->
+        <img alt='An abstract line drawing' src="https://res.cloudinary.com/dxvi2kqnz/image/upload/v1714049528/lineDrawing_nqjjlg.png">
+    </div>
+
+
+    <!-- POPUP MENU: -->
+    <!-- Greeting Container: -->
+    <div id="greetingContainer">
+        <div id="menuGreeting">
+            <h3>&#128075;</h3>
+            <h3>Hi I'm Malin</h3>
+        </div>
+    </div>
+
+    <!-- popup container: -->
+    <%= render "shared/popup" %>
+</section>
+
+
+
+<!-- About Split Section: -->
+
+<section class="splitSection">
+    <div class="left">
+        <a href="./about.html"><h3>About</h3></a>
+    </div>
+    <div class="right">
+        <p>Hello, I'm Malin, a multi-disciplinary designer originally from Lusaka, Zambia, and now based in Paris. I'm currently in my final semester pursuing a bachelors degree in Art, Media, and Technology at Parsons School of Design in Paris, where I've been able to hone my skills in programming and front-end development. With a passion for creating visually stunning, user-friendly designs, I've gained hands-on experience in <strong>front-end development, UI design, animation, and graphic design.</strong></p>
+    </div>
+</section>
+
+
+<!-- Projects Split Section: -->
+
+<section class="splitSection" class="projectsSplitSection">
+    <div class="left">
+            <a href="#recentWork"><h3>Recent Work</h3></a>
+    </div>
+    <div class="right" id="recentWork">
+
+        <a href="#">
+            <div class="recentProject" id="project1">
+                <div>
+                    <h2>Programming Projects</h2>
+                    <p class="smallText">Web Design - Frontend Development - Fullstack Development</p>
+                </div>
+                <div class="openIcon">
+                    <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.83007 0.457528V3.11625L12.3612 3.12568L0.88726 14.5997L2.77288 16.4853L14.2469 5.0113L14.2563 15.5425H16.915V0.457528H1.83007Z" fill="#3C3D3E"/>
+                    </svg>
+                </div>
+            </div>
+        </a>
+
+
+        <a href="#">
+            <div class="recentProject" id="project2">
+                <div>
+                    <h2>Animation Projects</h2>
+                    <p class="smallText">3D Animation - Advertisting - Graphic Design </p>
+                </div>
+                <div class="openIcon">
+                    <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.83007 0.457528V3.11625L12.3612 3.12568L0.88726 14.5997L2.77288 16.4853L14.2469 5.0113L14.2563 15.5425H16.915V0.457528H1.83007Z" fill="#3C3D3E"/>
+                    </svg>
+                </div>
+            </div>
+        </a>
+
+
+    </div>
+</section>

@@ -1,0 +1,22 @@
+/* SPLIT SECTION CLASS */
+
+.splitSection{
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+
+  margin: 0 5vw;
+  padding: 3.5vw 0;
+
+  .left{
+    width:35%;
+    display: flex;
+  }
+
+  .right{
+    width: 65%;
+
+    display: flex;
+    flex-direction: column;
+  }
+}
