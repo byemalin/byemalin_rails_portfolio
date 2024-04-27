@@ -24,9 +24,13 @@
 
 // Logo Hover animation to be replaced by js:
 
+// #navLogoContainer svg path{
+//   transition: all 500ms;
+//   &:hover {
+//     fill:red;
+//   }
+// }
+
 #navLogoContainer svg path{
   transition: all 500ms;
-  &:hover {
-    fill:red;
-  }
 }
