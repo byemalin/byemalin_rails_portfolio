@@ -7,13 +7,16 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
 
-    <%#= javascript_include_tag 'application' %>
+     <% if action_name != "landing" %>
+      <%= javascript_importmap_tags %>
+    <% end %>
+
   </head>
 
   <body>
     <%= render "shared/navbar" %>
     <%= yield %>
+    <%= render "shared/footer" %>
   </body>
 </html>

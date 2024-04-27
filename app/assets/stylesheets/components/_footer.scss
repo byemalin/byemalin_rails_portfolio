@@ -1,0 +1,66 @@
+/* FOOTER */
+
+footer{
+  padding: 5vw;
+  padding-bottom: 0;
+  background-color: #0B0C0E;
+  color: #F4F7FA;
+
+  ul{
+    display: flex;
+    padding: 0;
+  }
+  li{
+    list-style: none;
+    padding:0 1rem;
+  }
+}
+
+.footerMain{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 6vw;
+
+  h2{
+    margin: 1rem 0;
+  }
+
+  .profileImageContainer{
+    width:4.4rem;
+    height:4.4rem;
+    margin-right:0.5rem;
+  }
+}
+
+
+// Round avatar filling container:
+.profileImageContainer{
+  border-radius: 50%;
+  overflow: hidden;
+
+  img{
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+
+
+
+.inlineTextIMG{
+  display: flex;
+  align-items: center;
+}
+
+.footerLinks{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footerLinks p,
+footer nav li a{
+  color: #C7D0D9;
+}

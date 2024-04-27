@@ -1,0 +1,22 @@
+.cta{
+  width: 10.5rem;
+  height: 3.8rem;
+
+  font-size: 1rem;
+  font-weight: 500;
+
+  border-radius: 170px;
+
+  background-color: #F4F7FA;
+  border: none;
+}
+
+button:hover{
+  cursor: pointer;
+  background-color: #b9bbbc;
+  // border: 1px solid #F4F7FA;
+}
+
+button{
+  transition: all 200ms;
+}
