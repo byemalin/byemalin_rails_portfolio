@@ -31,6 +31,10 @@
 
   a{
     color:white;
+    transition: all 500ms;
+    &:hover {
+      color:red;
+    }
   }
 }
 
