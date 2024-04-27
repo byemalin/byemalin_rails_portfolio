@@ -1,0 +1,43 @@
+/* ABOUT PAGE */
+
+#aboutIntro2{
+  display: none;
+}
+
+.about canvas {
+  max-width: 100%;
+}
+
+.left .imageContainer{
+  width:343px;
+  height: 685px;
+}
+
+.left .imageContainer img{
+  max-width: 100%;
+  height: auto;
+}
+
+.about .left{
+  justify-content: center;
+}
+
+.skills{
+  width: 90vw;
+  margin: 0 5vw;
+}
+
+.skillIcons{
+  min-height: 5.6rem;
+
+  display: flex;
+  justify-content: space-evenly;
+
+  flex-wrap: wrap;
+
+  margin-bottom: 2rem;
+}
+.skillIcons img{
+  max-height: 100%;
+  margin: 1rem 0;
+}
