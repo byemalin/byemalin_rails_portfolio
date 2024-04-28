@@ -1,7 +1,7 @@
 <%#Navbar not to show on landing page%>
 <% if action_name != "landing" %>
 
-  <header class="mainNavHeader" id = "<%= "homePageHeader" if action_name == "home" %>">
+  <header class="mainNavHeader" id = "<%= "homePageHeader" if action_name == "home" || action_name == "about" %>">
     <a href="">
       <div id="navLogoContainer">
         <%#= image_tag "logos/byemalinLogo.svg" %>
