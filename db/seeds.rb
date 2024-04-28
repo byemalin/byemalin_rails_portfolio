@@ -11,15 +11,13 @@ require "open-uri"
 
 # Before clearing existing data seed should purge cloudinary images so that we don't have duplicates
 # Should this be done in the production seed too?
+puts "Purging cloudinary before seeding..."
 all_projects = AnimationProject.all + ProgrammingProject.all
 
-puts "All projects: #{all_projects}"
-
-puts "Purging cloudinary before seeding..."
-
 all_projects.each do |project|
-  project.cover_photo.purge
-  project.photos.purge
+  puts "PURGING: #{project}"
+  project.cover_photo.purge if project.cover_photo.attached?
+  project.photos.purge if project.photos.attached?
 end
 
 puts "Clearing existing project data..."
@@ -42,16 +40,12 @@ midpoint = ProgrammingProject.new(
   technologies_used: "Ruby on Rails, Figma, JavaScript, SCSS",
   live_url: "http://midpoint.world",
   tags: ["web development", "design", "travel"],
-  description: "Midpoint is a web application that allows users to search for flights from 2 different departure locations, and see suggestions for places to meet, based on flight information.
+  vimeo_id: "940391688",
+  description: "Midpoint is a web application that allows users to search for flights from 2 different departure locations, and see suggestions for places to meet, based on flight information.\n
 
-  I led a team of 3 developers to create this MVP in 2 weeks for the final project of our web development bootcamp.
+  I led a team of 3 developers to create this MVP in 2 weeks for the final project of our web development bootcamp.\n
 
-  My main focus on this project was ideation, design, and front-end implementation. However, as it was a learning experience, all team members worked in a full stack capacity.
-
-  <h3>Demo Video:</h3>
-
-  <div style='padding:56.25% 0 0 0;position:relative;'><iframe src='https://player.vimeo.com/video/940391688?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479' frameborder='0' allow='autoplay; fullscreen; picture-in-picture; clipboard-write' style='position:absolute;top:0;left:0;width:100%;height:100%;' title='Midpoint - Le Wagon Demoday - Web Dev - Sept 2023'></iframe></div><script src='https://player.vimeo.com/api/player.js'></script>
-  "
+  My main focus on this project was ideation, design, and front-end implementation. However, as it was a learning experience, all team members worked in a full stack capacity."
 )
 
 midpoint.cover_photo.attach(io: midpoint_cover_photo, filename: "midpoint_cover_photo.png", content_type: "image/png")

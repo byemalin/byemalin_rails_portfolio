@@ -2,7 +2,7 @@
 <% if action_name != "landing" %>
 
   <header class="mainNavHeader" id = "<%= "homePageHeader" if action_name == "home" || action_name == "about" %>">
-    <a href="">
+    <a href="/home">
       <div id="navLogoContainer">
         <%#= image_tag "logos/byemalinLogo.svg" %>
         <%# svg of logo to be animated: %>
@@ -13,8 +13,8 @@
     <nav>
         <ul>
           <li><%= link_to "Home", home_path%></li>
-          <li><%= link_to "About", home_path%></li>
-          <li><%= link_to "Contact", home_path%></li>
+          <li><%= link_to "About", about_path%></li>
+          <li><%= link_to "Contact", contact_path%></li>
         </ul>
     </nav>
 

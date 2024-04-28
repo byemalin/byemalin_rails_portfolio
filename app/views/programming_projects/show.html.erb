@@ -1,9 +1,31 @@
-<h1><%= @project.title %></h1>
+<h3><%= @project.title %></h3>
 
-<h3>Programming Project Show</h3>
+<p><%= @project.sub_heading %></p>
 
-<%= cl_image_tag('w0lxqtuycfvzbanzmbbj',
-      width: 400, height: 300, crop: :fill) %>
+<p class="smallText"><%= @project.technologies_used %></p>
 
+<%= cl_image_tag @project.cover_photo.key %>
 
-<div style='padding:56.25% 0 0 0;position:relative;'><iframe src='https://player.vimeo.com/video/940391688?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479' frameborder='0' allow='autoplay; fullscreen; picture-in-picture; clipboard-write' style='position:absolute;top:0;left:0;width:100%;height:100%;' title='Midpoint - Le Wagon Demoday - Web Dev - Sept 2023'></iframe></div><script src='https://player.vimeo.com/api/player.js'></script>
+<% if @project.live_url %>
+  <a href="<%= @project.live_url%>">Visit Live Site</a>
+<% end %>
+
+<div class="openIcon">
+    <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1.83007 0.457528V3.11625L12.3612 3.12568L0.88726 14.5997L2.77288 16.4853L14.2469 5.0113L14.2563 15.5425H16.915V0.457528H1.83007Z" fill="#3C3D3E"/>
+    </svg>
+</div>
+
+<p>
+  <%= @project.description %>
+</p>
+
+<% if @project.vimeo_id %>
+  <div>
+    <h3>Demo Video:</h3>
+    <iframe src="https://player.vimeo.com/video/<%= @project.vimeo_id %>?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow='fullscreen; picture-in-picture; clipboard-write' style='width:100%;height:100%;'></iframe>
+    <script src="https://player.vimeo.com/api/player.js"></script>
+  </div>
+<% end %>
+
+<%# <div style='padding:56.25% 0 0 0;position:relative;'><iframe src='https://player.vimeo.com/video/940391688?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479' frameborder='0' allow='autoplay; fullscreen; picture-in-picture; clipboard-write' style='position:absolute;top:0;left:0;width:100%;height:100%;' title='Midpoint - Le Wagon Demoday - Web Dev - Sept 2023'></iframe></div><script src='https://player.vimeo.com/api/player.js'></script> %>
