@@ -1,0 +1,49 @@
+/* CONTACT PAGE */
+
+.contact .splitSection{
+  padding-top: 0;
+}
+#contactFooter{
+  padding-bottom: 5vw;
+}
+
+.contact .profileImageContainer{
+  width: 16.7rem;
+  height: 16.7rem;
+}
+
+.contact .left{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  justify-content: space-evenly;
+}
+
+address{
+  font-style: normal;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.contact ul{
+  padding: 0;
+  margin: 0;
+}
+.contact li{
+  list-style: none;
+  line-height: 200%;
+}
+
+.contact a:hover{
+  color: red;
+}
+
+.contact .smallText{
+  margin-bottom: 0;
+}
+
+.contact iframe{
+  height:95vh;
+  border: none;
+}
