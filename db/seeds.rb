@@ -11,7 +11,18 @@ require "open-uri"
 
 # Before clearing existing data seed should purge cloudinary images so that we don't have duplicates
 # Should this be done in the production seed too?
+all_projects = AnimationProject.all + ProgrammingProject.all
 
+puts "All projects: #{all_projects}"
+
+puts "Purging cloudinary before seeding..."
+
+all_projects.each do |project|
+  project.cover_photo.purge
+  project.photos.purge
+end
+
+puts "Clearing existing project data..."
 # Clear existing data
 AnimationProject.delete_all
 ProgrammingProject.delete_all
@@ -19,16 +30,28 @@ ProgrammingProject.delete_all
 
 
 # Seed data for Programming Projects
-
+puts "Saving photos"
 midpoint_cover_photo = URI.open("https://res.cloudinary.com/dxvi2kqnz/image/upload/v1713521723/MidpointCoverPhoto_vjknxu.png")
 midpoint_style_photo = URI.open("https://res.cloudinary.com/dxvi2kqnz/image/upload/v1713530643/MidpointTypographyAndColours_gvdank.png")
 
+puts "Creating Midpoint..."
+
 midpoint = ProgrammingProject.new(
   title: "Midpoint",
-  description: "A flight searching site that helps travellers find the best midpoint destinations for meeting up with friends and family.",
+  sub_heading: "A flight searching site that helps travellers find the best midpoint destinations for meeting up with friends and family.",
   technologies_used: "Ruby on Rails, Figma, JavaScript, SCSS",
   live_url: "http://midpoint.world",
-  tags: ["web development", "design", "travel"]
+  tags: ["web development", "design", "travel"],
+  description: "Midpoint is a web application that allows users to search for flights from 2 different departure locations, and see suggestions for places to meet, based on flight information.
+
+  I led a team of 3 developers to create this MVP in 2 weeks for the final project of our web development bootcamp.
+
+  My main focus on this project was ideation, design, and front-end implementation. However, as it was a learning experience, all team members worked in a full stack capacity.
+
+  <h3>Demo Video:</h3>
+
+  <div style='padding:56.25% 0 0 0;position:relative;'><iframe src='https://player.vimeo.com/video/940391688?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479' frameborder='0' allow='autoplay; fullscreen; picture-in-picture; clipboard-write' style='position:absolute;top:0;left:0;width:100%;height:100%;' title='Midpoint - Le Wagon Demoday - Web Dev - Sept 2023'></iframe></div><script src='https://player.vimeo.com/api/player.js'></script>
+  "
 )
 
 midpoint.cover_photo.attach(io: midpoint_cover_photo, filename: "midpoint_cover_photo.png", content_type: "image/png")
@@ -37,13 +60,6 @@ midpoint.photos.attach(io: midpoint_style_photo, filename: "midpoint_style_photo
 midpoint.save!
 
 
-# ProgrammingProject.create!(
-#   title: "Byemalin Test Portfolio Website",
-#   description: "A personal portfolio website to showcase my software development and animation projects.",
-#   technologies_used: "Ruby on Rails, JavaScript, CSS",
-#   live_url: "http://byemalin.com",
-#   tags: ["web development", "personal", "portfolio"]
-# )
 
 
 # Seed data for Animation Projects
