@@ -19,6 +19,7 @@
 
   <body>
     <%= render "shared/navbar" %>
+    <%= render "shared/popup" unless action_name == "home"%>
     <%= yield %>
     <%= render "shared/footer" %>
   </body>

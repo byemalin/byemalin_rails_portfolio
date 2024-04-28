@@ -9,9 +9,13 @@
 #   end
 require "open-uri"
 
+# Before clearing existing data seed should purge cloudinary images so that we don't have duplicates
+# Should this be done in the production seed too?
+
 # Clear existing data
 AnimationProject.delete_all
 ProgrammingProject.delete_all
+
 
 
 # Seed data for Programming Projects
@@ -21,7 +25,7 @@ midpoint_style_photo = URI.open("https://res.cloudinary.com/dxvi2kqnz/image/uplo
 
 midpoint = ProgrammingProject.new(
   title: "Midpoint",
-  description: "A flight searching site that helps travelers find the best midpoint destinations for meeting up with friends and family.",
+  description: "A flight searching site that helps travellers find the best midpoint destinations for meeting up with friends and family.",
   technologies_used: "Ruby on Rails, Figma, JavaScript, SCSS",
   live_url: "http://midpoint.world",
   tags: ["web development", "design", "travel"]
