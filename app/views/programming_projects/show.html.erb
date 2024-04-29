@@ -28,4 +28,11 @@
   </div>
 <% end %>
 
-<%# <div style='padding:56.25% 0 0 0;position:relative;'><iframe src='https://player.vimeo.com/video/940391688?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479' frameborder='0' allow='autoplay; fullscreen; picture-in-picture; clipboard-write' style='position:absolute;top:0;left:0;width:100%;height:100%;' title='Midpoint - Le Wagon Demoday - Web Dev - Sept 2023'></iframe></div><script src='https://player.vimeo.com/api/player.js'></script> %>
+<% if @project.tiktok_id %>
+  <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@byemalin/video/<%= @project.tiktok_id %>" data-video-id="<%= @project.tiktok_id %>" style="height: 580px; max-width: 605px;min-width: 325px;" >
+    <section>
+      <a target="_blank" title="@byemalin" href="https://www.tiktok.com/@byemalin?refer=embed">@byemalin</a>
+    </section>
+  </blockquote>
+  <script async src="https://www.tiktok.com/embed.js"></script>
+<% end %>

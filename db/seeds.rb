@@ -28,11 +28,13 @@ ProgrammingProject.delete_all
 
 
 # Seed data for Programming Projects
+
+# MIDPOINT
+puts "Creating Midpoint..."
 puts "Saving photos"
 midpoint_cover_photo = URI.open("https://res.cloudinary.com/dxvi2kqnz/image/upload/v1713521723/MidpointCoverPhoto_vjknxu.png")
 midpoint_style_photo = URI.open("https://res.cloudinary.com/dxvi2kqnz/image/upload/v1713530643/MidpointTypographyAndColours_gvdank.png")
 
-puts "Creating Midpoint..."
 
 midpoint = ProgrammingProject.new(
   title: "Midpoint",
@@ -52,6 +54,36 @@ midpoint.cover_photo.attach(io: midpoint_cover_photo, filename: "midpoint_cover_
 midpoint.photos.attach(io: midpoint_style_photo, filename: "midpoint_style_photo.png", content_type: "image/png")
 
 midpoint.save!
+
+
+# TERRAIN
+puts "Creating Terrain..."
+puts "Saving photos"
+terrain_cover_photo = URI.open("https://res.cloudinary.com/dxvi2kqnz/image/upload/v1714369007/TerrainCover2_jhbwo8.png")
+# midpoint_style_photo = URI.open("https://res.cloudinary.com/dxvi2kqnz/image/upload/v1713530643/MidpointTypographyAndColours_gvdank.png")
+
+
+terrain = ProgrammingProject.new(
+  title: "Terrain",
+  sub_heading: "A web based drawing tool that I created to facilitate my artistic practice.",
+  technologies_used: "Javascript, UI Design, Drawing Tool",
+  live_url: "http://byemalin.com/terrain",
+  tags: ["web development", "design", "art"],
+  description: "Terrain was one of my first programming projects \n
+  It served as testement to the idea that my final thesis focused on: Coding should be a major part of fine art education.\n
+  \n
+  My artistic practice was previously focused on physical techniques for creating abstract, fictional elevation maps. \n
+  The idea for terrain was to allow for rapid prototyping of similar drawings.\n
+  \n
+  Please try it out and feel free to see one example use case below.
+  ",
+  tiktok_id: "7250558642804509978"
+)
+
+terrain.cover_photo.attach(io: terrain_cover_photo, filename: "midpoint_cover_photo.png", content_type: "image/png")
+# midpoint.photos.attach(io: midpoint_style_photo, filename: "midpoint_style_photo.png", content_type: "image/png")
+
+terrain.save!
 
 
 
