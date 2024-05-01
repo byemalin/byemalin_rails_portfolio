@@ -91,3 +91,21 @@
       transform: rotate(360deg);
   }
 }
+
+
+@media only screen and (max-width: 1020px){
+  /* Popup */
+  #greetingContainer{
+    display: none;
+  }
+
+
+  .recentProject{
+    flex-direction: column;
+    text-align: center;
+    align-content: flex-start;
+    .openIcon{
+      display: none;
+    }
+  }
+}

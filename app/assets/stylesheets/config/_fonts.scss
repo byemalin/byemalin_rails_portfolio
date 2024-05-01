@@ -46,3 +46,12 @@ p{
   line-height: 1.6rem;
   color: #3C3D3E;
 }
+
+
+@media only screen and (max-width: 767px){
+
+  p{
+    font-size: 1.2rem;
+  }
+
+}

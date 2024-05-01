@@ -24,3 +24,19 @@
     width: 50%;
   }
 }
+
+
+@media only screen and (max-width: 1020px){
+  /* Split section class */
+  .splitSection{
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .splitSection .right{
+    width: 100%;
+  }
+  .splitSection .left{
+    width: 100%;
+  }
+}
