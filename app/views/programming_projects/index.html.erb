@@ -2,19 +2,6 @@
 
 <% @programming_projects.each do |project| %>
 
-  <%= link_to project do%>
-    <%# Cover Photo %>
-    <%= cl_image_tag project.cover_photo.key %>
-
-    <h3><%= project.title %></h3>
-
-    <p class = "smallText"><%= project.technologies_used %></p>
-
-    <div class="openIcon">
-      <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M1.83007 0.457528V3.11625L12.3612 3.12568L0.88726 14.5997L2.77288 16.4853L14.2469 5.0113L14.2563 15.5425H16.915V0.457528H1.83007Z" fill="#3C3D3E"/>
-      </svg>
-    </div>
-  <% end %>
+  <%= render 'shared/cards/project_card' , project: project%>
 
 <% end %>
