@@ -16,16 +16,28 @@ spline-viewer{
 
 .skillIcons{
 
-  height: 5.6rem;
-
-  display: flex;
-  justify-content: space-evenly;
-
-  flex-wrap: wrap;
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(6, 1fr);
 
   margin-bottom: 2rem;
+  gap: 2rem;
+  img{
+    height: 5.6rem;
+    // margin: 1rem 0;
+    margin: 0 auto;
+  }
 }
-.skillIcons img{
-  max-height: 100%;
-  margin: 1rem 0;
+
+@media only screen and (max-width: 1020px){
+  .skillIcons{
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+@media only screen and (max-width: 767px){
+  .skillIcons{
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
