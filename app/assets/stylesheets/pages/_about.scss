@@ -1,7 +1,9 @@
 /* ABOUT PAGE */
 .about{
   .hero{
-    max-height: 64rem;
+    max-height: none;
+    flex-direction: column;
+    align-items: center;
   }
 }
 

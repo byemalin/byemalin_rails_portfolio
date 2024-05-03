@@ -18,7 +18,9 @@
   </head>
 
   <body>
-    <%= render "shared/navbar" %>
+    <% if action_name != "about" %>
+      <%= render "shared/navbar" %>
+    <% end %>
     <%= render "shared/popup" unless action_name == "home"%>
     <%= yield %>
     <%= render "shared/footer" %>
