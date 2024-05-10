@@ -1,7 +1,5 @@
 .projectCard{
-  width: 567px;
-  height: 478px;
-
+  width: 100%;
   .imageContainer{
     width: 100%;
     height: auto;
@@ -9,5 +7,22 @@
   img{
     width: 100%;
     height: 100%;
+    border-radius: 16px;
   }
+  .content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.projectCardsContainer{
+  width: 90%;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 40px;
+
 }

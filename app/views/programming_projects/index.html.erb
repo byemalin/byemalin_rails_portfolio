@@ -1,7 +1,9 @@
 <h3>Programming Projects</h3>
 
-<% @programming_projects.each do |project| %>
+<div class="projectCardsContainer">
+  <% @programming_projects.each do |project| %>
 
-  <%= render 'shared/cards/project_card' , project: project%>
+    <%= render 'shared/cards/project_card' , project: project%>
 
-<% end %>
+  <% end %>
+</div>
