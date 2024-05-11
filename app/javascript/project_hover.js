@@ -27,13 +27,13 @@ for (let card of cards) {
   function SetHoverStyle(e) {
     openIcon.style.backgroundColor = '#3C3D3E';
     openArrow.style.fill= '#F4F7FA';
-    image.style.opacity= '0.6';;
+    if(image){image.style.opacity= '0.6'};
   }
 
 
   function ResetHoverStyle(e) {
     openIcon.style.backgroundColor = '#F4F7FA';
     openArrow.style.fill= '#3C3D3E';
-    image.style.opacity= '1';;
+    if(image){image.style.opacity= '1'};
   }
 };

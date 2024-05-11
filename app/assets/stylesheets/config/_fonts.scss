@@ -17,7 +17,7 @@ a{
   color: black;
   transition: all 500ms;
   &:hover {
-    color:red;
+    color:red !important;
   }
 }
 
