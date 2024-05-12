@@ -67,17 +67,15 @@ closeIcon.addEventListener('mouseout', iconOut);
 
 
 function iconHover(){
-    closeIcon.style.backgroundColor='#3C3D3E';
 
     for(let i=0; i<2; i++){
-        closeLines[i].style.stroke = '#F4F7FA';
+        closeLines[i].style.stroke = '#3C3D3E';
     }
 }
 
 function iconOut(){
-    closeIcon.style.backgroundColor='#F4F7FA';
 
     for(let i=0; i<2; i++){
-        closeLines[i].style.stroke = '#3C3D3E';
+        closeLines[i].style.stroke = '#F4F7FA';
     }
 }
