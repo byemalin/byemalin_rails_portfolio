@@ -18,6 +18,7 @@ all_projects.each do |project|
   puts "PURGING: #{project}"
   project.cover_photo.purge if project.cover_photo.attached?
   project.photos.purge if project.photos.attached?
+  project.videos.purge if project.photos.attached?
 end
 
 puts "Clearing existing project data..."
@@ -103,9 +104,9 @@ nodaleto_video_2 = URI.open("https://res.cloudinary.com/dxvi2kqnz/video/upload/v
 
 
 nodaleto = AnimationProject.new(
-  title: "Nodaleto",
-  description: "My personal take on 2 product animations inspired by Nodaleto's Bulla Rina. These weren't commisioned works.",
-  tags: ["Product Visualisation", "Fashion", "3D Modelling"]
+  title: "Nodaleto - Bulla Rina",
+  description: "My personal take on 2 product animations inspired by Nodaleto's Bulla Rina.",
+  tags: ["Product Vis", "Fashion", "3D Modelling"]
 )
 
 nodaleto.cover_photo.attach(io: nodaleto_cover_photo, filename: "nodaleto_cover_photo.png", content_type: "image/png")
@@ -113,6 +114,28 @@ nodaleto.videos.attach(io: nodaleto_video_1, filename: "nodaleto_video_1.png")
 nodaleto.videos.attach(io: nodaleto_video_2, filename: "nodaleto_video_2.png")
 
 nodaleto.save!
+
+
+# Aliange
+
+puts "Seeding Aliange"
+
+puts "Saving Photos and Videos"
+aliange_cover_photo = URI.open("https://res.cloudinary.com/dxvi2kqnz/image/upload/v1715529090/alianageTestSmoothVellum_nr4bqy.png")
+
+aliange_video_1 = URI.open("https://res.cloudinary.com/dxvi2kqnz/video/upload/v1715528941/AliangeDailyFinal_id7eom.mp4")
+
+
+aliange = AnimationProject.new(
+  title: "Aliange - Daily Devotion",
+  description: "A concept animation for Aliange Skincare",
+  tags: ["Product Vis", "Skincare", "Physics Simulation"]
+)
+
+aliange.cover_photo.attach(io: aliange_cover_photo, filename: "aliange_cover_photo.png", content_type: "image/png")
+aliange.videos.attach(io: aliange_video_1, filename: "aliange_video_1.png")
+
+aliange.save!
 
 
 puts "Database seeded!"

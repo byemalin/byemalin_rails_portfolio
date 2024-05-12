@@ -1,0 +1,30 @@
+.animationShow{
+  width: 90%;
+  margin: 0 auto;
+  iframe{
+    width: 50.6vh;
+    height: 90vh;
+    margin: 24px auto;
+  }
+  .videosContainer{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+}
+
+
+@media only screen and (max-width: 767px){
+
+  .animationShow{
+    .videosContainer{
+      display: block;
+    }
+    iframe{
+      width: 90vw;
+      height: 160vw;
+      margin: 24px auto;
+    }
+  }
+
+}
