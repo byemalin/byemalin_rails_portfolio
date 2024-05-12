@@ -1,3 +1,12 @@
-<h1><%= @project.title %></h1>
+<main class="animationShow">
+  <h3><%= @project.title %></h3>
 
-<h3>Animation Project Show</h3>
+  <% @project.videos.each do |video| %>
+    <%= cl_video_tag video.key %>
+  <% end %>
+
+  <%# cl_image_tag @project.cover_photo.key %>
+
+  <p><%= @project.description %></p>
+
+</main>

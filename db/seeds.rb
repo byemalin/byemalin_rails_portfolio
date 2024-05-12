@@ -87,17 +87,32 @@ terrain.save!
 
 
 
+# Seed data for Animation Projects
 puts "Seeding Data for Animation Projects"
 
-# Seed data for Animation Projects
-AnimationProject.create!(
+
+# Nodaleto
+
+puts "Seeding Nodaleto"
+
+puts "Saving Photos and Videos"
+nodaleto_cover_photo = URI.open("https://res.cloudinary.com/dxvi2kqnz/image/upload/v1715521917/animation_videos/Nodaleto/zoomBulla_cmobpa.png")
+
+nodaleto_video_1 = URI.open("https://res.cloudinary.com/dxvi2kqnz/video/upload/v1715519446/animation_videos/Nodaleto/nodaleto_cloth_xhqp0v.mp4")
+nodaleto_video_2 = URI.open("https://res.cloudinary.com/dxvi2kqnz/video/upload/v1715519327/animation_videos/Nodaleto/nodaleto_box_reveal_klkgyi.mp4")
+
+
+nodaleto = AnimationProject.new(
   title: "Nodaleto",
   description: "My personal take on 2 product animations inspired by Nodaleto's Bulla Rina. These weren't commisioned works.",
-  video_url: "https://www.sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4",
-  videos: [
-    "https://www.sample-videos.com/video123/mp4/480/big_buck_bunny_480p_1mb.mp4"
-  ],
-  tags: ["ocean", "adventure", "mystery"]
+  tags: ["Product Visualisation", "Fashion", "3D Modelling"]
 )
+
+nodaleto.cover_photo.attach(io: nodaleto_cover_photo, filename: "nodaleto_cover_photo.png", content_type: "image/png")
+nodaleto.videos.attach(io: nodaleto_video_1, filename: "nodaleto_video_1.png")
+nodaleto.videos.attach(io: nodaleto_video_2, filename: "nodaleto_video_2.png")
+
+nodaleto.save!
+
 
 puts "Database seeded!"
