@@ -1,5 +1,7 @@
 <h1>Animation Projects Index</h1>
 
 <% @animation_projects.each do |project| %>
+  <%= link_to project do%>
   <%= project.title %>
+  <% end %>
 <% end %>

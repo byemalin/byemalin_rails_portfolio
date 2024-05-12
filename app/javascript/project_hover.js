@@ -27,7 +27,7 @@ for (let card of cards) {
   function SetHoverStyle(e) {
     openIcon.style.backgroundColor = '#3C3D3E';
     openArrow.style.fill= '#F4F7FA';
-    if(image){image.style.opacity= '0.6'};
+    if(image){image.style.opacity= '0.9'};
   }
 
 

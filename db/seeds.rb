@@ -87,11 +87,12 @@ terrain.save!
 
 
 
+puts "Seeding Data for Animation Projects"
 
 # Seed data for Animation Projects
 AnimationProject.create!(
-  title: "Ocean Adventures",
-  description: "A short animation exploring the depths of the ocean and its mysterious inhabitants.",
+  title: "Nodaleto",
+  description: "My personal take on 2 product animations inspired by Nodaleto's Bulla Rina. These weren't commisioned works.",
   video_url: "https://www.sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4",
   videos: [
     "https://www.sample-videos.com/video123/mp4/480/big_buck_bunny_480p_1mb.mp4"
