@@ -5,6 +5,9 @@ ruby "3.1.4"
 # I'm adding cloudinary gem
 gem "cloudinary"
 
+# I'm adding devise
+gem "devise"
+
 # Im adding strong migrations gem
 gem "strong_migrations"
 
