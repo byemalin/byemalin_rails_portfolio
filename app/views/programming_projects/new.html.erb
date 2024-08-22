@@ -1,0 +1,52 @@
+<%= form_with(model: @programming_project, local: true) do |form| %>
+  <% if @programming_project.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@programming_project.errors.count, "error") %> prohibited this programming_project from being saved:</h2>
+
+      <ul>
+      <% @programming_project.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title, id: :programming_project_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description, id: :programming_project_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :technologies_used %>
+    <%= form.text_field :technologies_used, id: :programming_project_technologies_used %>
+  </div>
+
+  <div class="field">
+    <%= form.label :live_url %>
+    <%= form.url_field :live_url, id: :programming_project_live_url %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tags %>
+    <%= form.text_field :tags, id: :programming_project_tags %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cover_photo, "Cover Photo (required)" %>
+    <%= form.file_field :cover_photo, required: true %>
+  </div>
+
+  <div class="field">
+    <%= form.label :photos, "Other Photos (optional)" %>
+    <%= form.file_field :photos, multiple: true, direct_upload: true %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
