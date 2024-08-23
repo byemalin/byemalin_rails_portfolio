@@ -1,4 +1,4 @@
-<main class="animationShow">
+<main class="animationShow mainSection90Width">
 
   <%= link_to "< Back", animation_projects_path%>
 
@@ -20,9 +20,9 @@
     <% end %>
   </div>
 
-<% if current_user&.is_admin? %>
-  <%= link_to 'Edit', edit_animation_project_path(@project) %>
-<% end %>
+  <% if current_user&.is_admin? %>
+    <%= link_to 'Edit', edit_animation_project_path(@project) %>
+  <% end %>
 
 
 </main>

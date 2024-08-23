@@ -1,9 +1,18 @@
-<%# <h3>Programming Projects</h3> %>
+<main class = "mainSection90Width">
 
-<div class="projectCardsContainer">
-  <% @programming_projects.each do |project| %>
+  <h3 class = "h3Title90Width">Programming Projects</h3>
 
-    <%= render 'shared/cards/programming_project_card' , project: project%>
+  <p>See more on <a href="https://www.github.com/byemalin" target="_blank">Github</a></p>
+  <br>
 
-  <% end %>
-</div>
+  <div class="projectCardsContainer">
+    <% @programming_projects.each do |project| %>
+
+      <%= render 'shared/cards/programming_project_card' , project: project%>
+
+    <% end %>
+  </div>
+
+
+
+</main>
