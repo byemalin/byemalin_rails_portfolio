@@ -1,4 +1,7 @@
 class ProgrammingProjectsController < ApplicationController
+  before_action :authenticate_user!, except: [:index, :show]
+  before_action :check_user, only: [:new, :create, :edit, :update]
+
   def index
     @programming_projects = ProgrammingProject.all
   end
@@ -46,6 +49,10 @@ class ProgrammingProjectsController < ApplicationController
   end
 
   private
+
+  def check_user
+    redirect_to root_path, alert: "Unauthorized access!" unless current_user && current_user.is_admin?
+  end
 
   def set_programming_project
     @programming_project = ProgrammingProject.find(params[:id])

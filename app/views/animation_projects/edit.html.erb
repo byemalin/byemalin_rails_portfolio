@@ -1,0 +1,70 @@
+<h1>Edit Animation Project</h1>
+
+<%= form_with(model: @animation_project, local: true) do |form| %>
+  <%#= render 'form_errors', project: @animation_project %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sub_heading %>
+    <%= form.text_field :sub_heading %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description %>
+  </div>
+
+
+  <%# Cover Photo: %>
+
+  <div class="field">
+    <%= form.label :cover_photo, "Cover Photo (required)" %>
+    <%= form.file_field :cover_photo %>
+    <% if @animation_project.cover_photo.attached? %>
+      <%= image_tag @animation_project.cover_photo %>
+      <div>
+        <%= form.check_box :remove_cover_photo %>
+        <label>Remove cover photo</label>
+      </div>
+    <% end %>
+  </div>
+
+  <%# Photos: %>
+
+  <div class="field">
+    <%= form.label :photos, "Other Photos (optional)" %>
+    <%= form.file_field :photos, multiple: true, direct_upload: true %>
+    <% @animation_project.photos.each do |photo| %>
+      <%= image_tag photo %>
+      <%= check_box_tag 'animation_project[remove_photos][]', photo.id %>
+      <label>Remove</label>
+    <% end %>
+  </div>
+
+  <%# Videos: %>
+
+  <div class="field">
+    <%= form.label :videos, "Other Videos (optional)" %>
+    <%= form.file_field :videos, multiple: true, direct_upload: true %>
+    <% @animation_project.videos.each do |video| %>
+
+      <% url = "https://player.cloudinary.com/embed/?cloud_name=dxvi2kqnz&public_id=production/#{video.key}"%>
+      <iframe
+        src="<%= url %>"
+        frameborder="0"
+        allow="fullscreen">
+      </iframe>
+
+      <%= check_box_tag 'animation_project[remove_videos][]', video.id %>
+      <label>Remove</label>
+    <% end %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Update Animation Project" %>
+  </div>
+<% end %>
