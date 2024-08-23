@@ -49,5 +49,6 @@
 </main>
 
 
-
-<%= link_to 'Edit', edit_programming_project_path(@project) %>
+  <% if current_user&.is_admin? %>
+    <%= link_to 'Edit', edit_programming_project_path(@project) %>
+  <% end %>
