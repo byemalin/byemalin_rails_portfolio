@@ -27,6 +27,17 @@ class ProgrammingProjectsController < ApplicationController
   end
 
   def update
+    if params[:programming_project][:remove_cover_photo] == '1'
+      @programming_project.cover_photo.purge
+    end
+
+    if params[:programming_project][:remove_photos]
+      params[:programming_project][:remove_photos].each do |photo_id|
+        photo = @programming_project.photos.find(photo_id)
+        photo.purge
+      end
+    end
+
     if @programming_project.update(programming_project_params)
       redirect_to programming_projects_path, notice: 'Programming project was successfully updated.'
     else

@@ -51,14 +51,22 @@
     <%= form.file_field :cover_photo %>
     <% if @programming_project.cover_photo.attached? %>
       <%= image_tag @programming_project.cover_photo %>
+      <label>
+        <%= form.check_box :remove_cover_photo %>
+        Remove cover photo
+      </label>
     <% end %>
   </div>
 
   <div class="field">
     <%= form.label :photos, "Other Photos (optional)" %>
-    <%= form.file_field :photos, multiple: true, direct_upload: true %>
-    <% @programming_project.photos.each do |photo| %>
+    <%= form.file_field :photos, multiple: true %>
+    <% @programming_project.photos.each_with_index do |photo, index| %>
       <%= image_tag photo %>
+      <label>
+        <%= check_box_tag "programming_project[remove_photos][]", photo.id %>
+        Remove
+      </label>
     <% end %>
   </div>
 
