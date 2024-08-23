@@ -1,0 +1,68 @@
+<h1>Edit Programming Project</h1>
+
+<%= form_with(model: @programming_project, local: true) do |form| %>
+  <%#= render 'form_errors', project: @programming_project %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description, id: :programming_project_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :technologies_used %>
+    <%= form.text_field :technologies_used, id: :programming_project_technologies_used %>
+  </div>
+
+  <div class="field">
+    <%= form.label :live_url %>
+    <%= form.url_field :live_url, id: :programming_project_live_url %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tags %>
+    <%= form.text_field :tags, id: :programming_project_tags %>
+  </div>
+
+  <div class="field">
+    <%= form.label :vimeo_id %>
+    <%= form.text_field :vimeo_id, id: :programming_project_tags %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tiktok_id %>
+    <%= form.text_field :tiktok_id, id: :programming_project_tags %>
+  </div>
+
+  <div class="field">
+    <%= form.label :video_url %>
+    <%= form.text_field :video_url, id: :programming_project_tags %>
+  </div>
+
+
+
+
+  <div class="field">
+    <%= form.label :cover_photo, "Cover Photo (required 16:9 ish)" %>
+    <%= form.file_field :cover_photo %>
+    <% if @programming_project.cover_photo.attached? %>
+      <%= image_tag @programming_project.cover_photo %>
+    <% end %>
+  </div>
+
+  <div class="field">
+    <%= form.label :photos, "Other Photos (optional)" %>
+    <%= form.file_field :photos, multiple: true, direct_upload: true %>
+    <% @programming_project.photos.each do |photo| %>
+      <%= image_tag photo %>
+    <% end %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Update Project" %>
+  </div>
+<% end %>
