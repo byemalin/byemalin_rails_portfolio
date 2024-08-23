@@ -37,7 +37,22 @@
   </div>
 
   <div class="field">
-    <%= form.label :cover_photo, "Cover Photo (required)" %>
+    <%= form.label :vimeo_id %>
+    <%= form.text_field :vimeo_id, id: :programming_project_tags %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tiktok_id %>
+    <%= form.text_field :tiktok_id, id: :programming_project_tags %>
+  </div>
+
+  <div class="field">
+    <%= form.label :video_url %>
+    <%= form.text_field :video_url, id: :programming_project_tags %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cover_photo, "Cover Photo (required 16:9 ish)" %>
     <%= form.file_field :cover_photo, required: true %>
   </div>
 

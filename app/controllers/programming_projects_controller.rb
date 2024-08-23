@@ -23,6 +23,6 @@ class ProgrammingProjectsController < ApplicationController
   private
 
   def programming_project_params
-    params.require(:programming_project).permit(:title, :description, :technologies_used, :live_url, :tags)
+    params.require(:programming_project).permit(:title, :description, :technologies_used, :live_url, :tags, :cover_photo, photos: [])
   end
 end
