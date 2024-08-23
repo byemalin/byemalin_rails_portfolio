@@ -46,9 +46,21 @@
     </blockquote>
     <script async src="https://www.tiktok.com/embed.js"></script>
   <% end %>
-</main>
+
+
+
+  <h4>Additional Photos:</h4>
+
+  <% if @project.photos.length > 0 %>
+    <%@project.photos.each do |photo|%>
+      <%= cl_image_tag photo.key %>
+    <% end %>
+  <% end %>
 
 
   <% if current_user&.is_admin? %>
     <%= link_to 'Edit', edit_programming_project_path(@project) %>
   <% end %>
+
+
+</main>
