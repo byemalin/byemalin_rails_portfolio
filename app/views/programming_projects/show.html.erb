@@ -49,9 +49,9 @@
 
 
 
-  <h4>Additional Photos:</h4>
 
   <% if @project.photos.length > 0 %>
+  <p>Additional Photos:</p>
     <%@project.photos.each do |photo|%>
       <%= cl_image_tag photo.key %>
     <% end %>
