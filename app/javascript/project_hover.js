@@ -5,12 +5,8 @@ console.log("Project Hover Script Connected")
 // Take all the relevant cards from any page
 let cards = document.getElementsByClassName("recentProject")
 
-console.log(cards);
-
 if (cards.length == 0){
   cards = document.getElementsByClassName("projectCard")
-
-  console.log(cards);
 }
 
 

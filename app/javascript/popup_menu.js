@@ -1,53 +1,58 @@
-console.log("Popup Javascript Connected");
 
-//Popup Menu JS
+document.addEventListener('turbo:load', function() {
 
-// greeting on home page hero
+  console.log("Turbo Load");
 
-//popup and closeIcon
-let popup = document.querySelector('.popupMenuContainer');
-let closeIcon = document.querySelector('.closeIcon');
+  console.log("Popup Javascript Connected");
 
-if (document.getElementById('greetingContainer')){
-  let greeting = document.getElementById('greetingContainer');
+  //Popup Menu JS
 
-  greeting.onclick = displayHeroPopup;
-  closeIcon.onclick = hideHeroPopup;
+  // greeting on home page hero
 
-  function displayHeroPopup(){
-      popup.style.width='50vw';
+  //popup and closeIcon
+  let popup = document.querySelector('.popupMenuContainer');
+  let closeIcon = document.querySelector('.closeIcon');
+
+  if (document.getElementById('greetingContainer')){
+    let greeting = document.getElementById('greetingContainer');
+
+    greeting.onclick = displayHeroPopup;
+    closeIcon.onclick = hideHeroPopup;
+
+    function displayHeroPopup(){
+        popup.style.width='50vw';
+    }
+
+    function hideHeroPopup(){
+        popup.style.width='0px';
+    }
   }
 
-  function hideHeroPopup(){
+
+
+
+  // Responsive popup:
+  let burger = document.querySelector('.burgerContainer');
+  let body = document.querySelector('body');
+
+
+  burger.onclick = displayPopup;
+  closeIcon.onclick = hidePopup;
+
+
+  function displayPopup(){
+      popup.style.width='100vw';
+
+      body.style.height='100px';
+      body.style.overflow = 'hidden';
+  }
+
+  function hidePopup(){
       popup.style.width='0px';
+
+      body.style.height='100%';
+      body.style.overflow = 'visible';
   }
-}
-
-
-
-
-// Responsive popup:
-let burger = document.querySelector('.burgerContainer');
-let body = document.querySelector('body');
-
-
-burger.onclick = displayPopup;
-closeIcon.onclick = hidePopup;
-
-
-function displayPopup(){
-    popup.style.width='100vw';
-
-    body.style.height='100px';
-    body.style.overflow = 'hidden';
-}
-
-function hidePopup(){
-    popup.style.width='0px';
-
-    body.style.height='100%';
-    body.style.overflow = 'visible';
-}
 
 
 
@@ -57,25 +62,28 @@ function hidePopup(){
 
 
 
-// Animation colours for close icon:
+  // Animation colours for close icon:
 
-let closeLines = closeIcon.getElementsByTagName('line');
-
-
-closeIcon.addEventListener('mouseover', iconHover);
-closeIcon.addEventListener('mouseout', iconOut);
+  let closeLines = closeIcon.getElementsByTagName('line');
 
 
-function iconHover(){
+  closeIcon.addEventListener('mouseover', iconHover);
+  closeIcon.addEventListener('mouseout', iconOut);
 
-    for(let i=0; i<2; i++){
-        closeLines[i].style.stroke = '#3C3D3E';
-    }
-}
 
-function iconOut(){
+  function iconHover(){
 
-    for(let i=0; i<2; i++){
-        closeLines[i].style.stroke = '#F4F7FA';
-    }
-}
+      for(let i=0; i<2; i++){
+          closeLines[i].style.stroke = '#3C3D3E';
+      }
+  }
+
+  function iconOut(){
+
+      for(let i=0; i<2; i++){
+          closeLines[i].style.stroke = '#F4F7FA';
+      }
+  }
+
+
+});
