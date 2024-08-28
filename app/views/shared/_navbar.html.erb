@@ -1,5 +1,5 @@
 <%#Navbar not to show on landing page%>
-<% if action_name != "landing" %>
+<% if action_name != "landing" && action_name != "terrain"%>
 
   <header class="mainNavHeader" id = "<%= "homePageHeader" if action_name == "home" %>">
     <a href="/home">

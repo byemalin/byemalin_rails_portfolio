@@ -9,7 +9,7 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
 
 
-     <% if action_name != "landing" %>
+     <% if action_name != "landing" && action_name != "terrain" %>
       <%= javascript_importmap_tags %>
     <% end %>
 
