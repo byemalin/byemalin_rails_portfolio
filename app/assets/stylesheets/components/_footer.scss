@@ -76,6 +76,9 @@ footer nav li a{
   .footerMain{
     flex-direction: column;
     text-align: center;
+    h2{
+      font-size: 1.5rem !important;
+    }
   }
 
   .inlineTextIMG{
