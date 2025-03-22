@@ -65,6 +65,8 @@ class AnimationProjectsController < ApplicationController
     params.require(:animation_project).permit(
       :title, :sub_heading, :description, :video_url,
       :remove_cover_photo, # Ensure this is a single symbol
+      :cover_photo,
+      :tiktok_id,
       videos: [], # Using colon notation directly for arrays
       tags: [],
       photos: [],

@@ -10,8 +10,8 @@
 
   <div class="videosContainer">
     <% @project.videos.each do |video| %>
-      <% url = "https://player.cloudinary.com/embed/?cloud_name=dxvi2kqnz&public_id=production/#{video.key}"%>
-      <%# url = "https://player.cloudinary.com/embed/?cloud_name=dxvi2kqnz&public_id=development/#{video.key}"%>
+      <% url = "https://player.cloudinary.com/embed/?cloud_name=dxvi2kqnz&resource_type=video&public_id=development/#{video.key}"%>
+
       <iframe
         src="<%= url %>"
         frameborder="0"
