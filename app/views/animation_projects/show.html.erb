@@ -26,10 +26,16 @@
 
 
   <% if @project.photos.length > 0 %>
-  <p>Additional Photos:</p>
-    <%@project.photos.each do |photo|%>
-      <%= cl_image_tag photo.key %>
-    <% end %>
+    <p>Additional Photos:</p>
+
+    <div class="additionalPhotos">
+      <%@project.photos.each do |photo|%>
+      <div class="gridImageContainer">
+        <%= cl_image_tag photo.key %>
+      </div>
+      <% end %>
+    </div>
+
   <% end %>
 
 
