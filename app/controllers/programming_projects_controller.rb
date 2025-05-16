@@ -59,6 +59,6 @@ class ProgrammingProjectsController < ApplicationController
   end
 
   def programming_project_params
-    params.require(:programming_project).permit(:title, :description, :technologies_used, :live_url, :tags, :cover_photo, photos: [])
+    params.require(:programming_project).permit(:title, :description, :technologies_used, :live_url, :tags, :cover_photo, :rich_description, photos: [])
   end
 end

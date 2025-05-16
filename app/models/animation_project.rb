@@ -3,6 +3,8 @@ class AnimationProject < ApplicationRecord
   has_many_attached :photos
   has_many_attached :videos
 
+  has_rich_text :rich_description
+
   validates :cover_photo, presence: true
 
   # Virtual attribute for removing the cover photo

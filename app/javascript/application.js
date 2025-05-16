@@ -4,3 +4,6 @@ import "controllers"
 import "popup_menu"
 import "project_hover"
 import "logo_hover"
+
+import "trix"
+import "@rails/actiontext"
