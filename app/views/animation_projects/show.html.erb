@@ -7,6 +7,13 @@
 
 
 
+  <% if @project.rich_description %>
+    <div class="rich-description">
+      <%= @project.rich_description %>
+    </div>
+  <% end %>
+
+
 
   <div class="videosContainer">
     <% @project.videos.each do |video| %>

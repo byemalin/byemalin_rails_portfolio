@@ -29,6 +29,11 @@
   </div>
 
   <div class="field">
+    <%= form.label :rich_description, "Detailed Description" %><br>
+    <%= form.rich_text_area :rich_description %>
+  </div>
+
+  <div class="field">
     <%= form.label :cover_photo, "Cover Photo (required)" %>
     <%= form.file_field :cover_photo, required: true, direct_upload: true %>
   </div>

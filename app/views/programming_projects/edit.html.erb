@@ -14,6 +14,11 @@
   </div>
 
   <div class="field">
+    <%= form.label :rich_description, "Detailed Description" %><br>
+    <%= form.rich_text_area :rich_description %>
+  </div>
+
+  <div class="field">
     <%= form.label :technologies_used %>
     <%= form.text_field :technologies_used, id: :programming_project_technologies_used %>
   </div>

@@ -67,6 +67,7 @@ class AnimationProjectsController < ApplicationController
       :remove_cover_photo, # Ensure this is a single symbol
       :cover_photo,
       :tiktok_id,
+      :rich_description,
       videos: [], # Using colon notation directly for arrays
       tags: [],
       photos: [],
