@@ -37,6 +37,11 @@
   </div>
 
   <div class="field">
+    <%= form.label :active, "Currently Active?" %><br>
+    <%= form.check_box :active %>
+  </div>
+
+  <div class="field">
     <%= form.label :tags %>
     <%= form.text_field :tags, id: :programming_project_tags %>
   </div>
