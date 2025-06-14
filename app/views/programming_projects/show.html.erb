@@ -3,8 +3,14 @@
   <%= link_to "< Back", programming_projects_path%>
 
   <h3><%= @project.title %></h3>
+  <p><%= @project.description %></p>
 
-  <p><%= @project.sub_heading %></p>
+  <% if @project.rich_description %>
+    <div class="rich-description">
+      <%= @project.rich_description %>
+    </div>
+  <% end %>
+
 
   <p class="smallText"><%= @project.technologies_used %></p>
 
