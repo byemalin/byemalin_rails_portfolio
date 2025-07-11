@@ -1,7 +1,9 @@
 <main class="programmingShow">
 
   <h3><%= @project.title %></h3>
+  <p class="smallText"><%= @project.technologies_used %></p>
   <p><%= @project.description %></p>
+
 
   <div class="project-hero">
 
@@ -37,7 +39,6 @@
   <% end %>
 
 
-  <p class="smallText"><%= @project.technologies_used %></p>
 
 
   <% if @project.vimeo_id != "" %>
