@@ -39,3 +39,10 @@ body{
     text-decoration: underline;
   }
 }
+
+// Putting this here just because huge images were getting in the way
+.edit-project{
+  img{
+    max-width: 60%;
+  }
+}

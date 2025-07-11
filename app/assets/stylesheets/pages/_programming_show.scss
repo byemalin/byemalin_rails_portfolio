@@ -1,9 +1,25 @@
 .programmingShow{
-  width: 90%;
+  width: 60%;
   margin: 0 auto;
+  padding: 1rem 2rem;
   img{
     width: 100%;
     border-radius: 16px;
+  }
+}
+
+.project-hero{
+  margin: 0 auto;
+
+  max-width: 800px;
+
+  &:hover{
+    cursor: pointer;
+    opacity: 0.8;
+
+    transition: 400ms;
+  }
+  img{
   }
 }
 
@@ -12,6 +28,7 @@
   padding-bottom: 56.25%; /* 16:9 */
   height: 0;
   overflow: hidden;
+
 }
 
 .videoWrapper iframe {
@@ -20,6 +37,11 @@
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+.tiktok-embed{
+  max-width: 200px !important;
+  border-radius: 8px;
 }
 
 
@@ -47,17 +69,13 @@
   color:red !important;
 }
 
-// .openIcon:hover,
-// .openIcon svg path:hover{
-//   background-color: #3C3D3E;
-//   fill: #F4F7FA;
-// }
 
 
 
 @media only screen and (max-width: 1020px){
 
   .programmingShow{
+    width: 90%;
     .openIcon{
       display: none;
     }
