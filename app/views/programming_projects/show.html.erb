@@ -21,6 +21,7 @@
         </div>
       </a>
     <% else %>
+      <%= cl_image_tag @project.cover_photo.key %>
       <div class="liveUrl inactive">
           <p>The live site is currently inactive</p>
           <div class="openIcon">
