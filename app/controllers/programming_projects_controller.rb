@@ -4,6 +4,8 @@ class ProgrammingProjectsController < ApplicationController
 
   def index
     @programming_projects = ProgrammingProject.all
+    @programming_projects = @programming_projects.order(created_at: :asc)
+
   end
 
   def show
